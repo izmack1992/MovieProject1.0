@@ -8,4 +8,5 @@ WHAT IT'S ABOUT:
 Online dating application based on film compatibility
 
 SOFTWARE BEING USED:
-Javascript, HTML/CSS, Bootstrap, Possibly Java, mySQL
+Javascript, HTML/CSS, Bootstrap, Possibly Java, MS SQL Server,
+SQL
