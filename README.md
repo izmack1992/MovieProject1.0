@@ -5,7 +5,7 @@ CONTRIBUTORS:
 Brandon Jones, Ian McCormack
 
 WHAT IT'S ABOUT:
-Online dating application
+Online dating application based on film compatibility
 
 SOFTWARE BEING USED:
 Javascript, HTML/CSS, Bootstrap, Possibly Java, mySQL
