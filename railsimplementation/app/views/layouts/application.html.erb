@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MovieProject</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danielgindi-jquery-backstretch/2.1.13/jquery.backstretch.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Movie Match</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Catalog</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <% if user_signed_in? %>
+                <a>Welcome <%= current_user.name %></a></li><li><%=link_to "Sign Out", destroy_user_session_path, :method => 'delete' %>
+              <%else%>
+                <%= link_to('Login', new_user_session_path) %></li>
+                <li><%= link_to('Register', new_user_registration_path) %>
+              <%end%>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <%= yield %>
+    <%= render "/backgroundSlider" %>
+    
+  </body>
+</html>

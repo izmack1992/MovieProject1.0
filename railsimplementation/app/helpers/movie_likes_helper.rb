@@ -1,0 +1,2 @@
+module MovieLikesHelper
+end

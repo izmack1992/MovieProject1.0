@@ -1,0 +1,27 @@
+<%= form_for(movie_like) do |f| %>
+  <% if movie_like.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(movie_like.errors.count, "error") %> prohibited this movie_like from being saved:</h2>
+
+      <ul>
+      <% movie_like.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :movie %>
+    <%= f.number_field :movie %>
+  </div>
+
+  <div class="field">
+    <%= f.label :like %>
+    <%= f.check_box :like %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
